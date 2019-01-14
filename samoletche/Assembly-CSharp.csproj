@@ -53,18 +53,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CanvasController.cs" />
-     <Compile Include="Assets\MenuController.cs" />
-     <Compile Include="Assets\PowerUp.cs" />
      <Compile Include="Assets\Scripts\AsteroidMovementController.cs" />
      <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
+     <Compile Include="Assets\Scripts\CanvasController.cs" />
      <Compile Include="Assets\Scripts\DamageDealer.cs" />
      <Compile Include="Assets\Scripts\FramerateLimiter.cs" />
      <Compile Include="Assets\Scripts\GameOverMenuHandler.cs" />
      <Compile Include="Assets\Scripts\GameStateController.cs" />
      <Compile Include="Assets\Scripts\HitReceiver.cs" />
+     <Compile Include="Assets\Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\PowerUp.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\SaveAndLoadSys.cs" />
      <Compile Include="Assets\Scripts\SavedData.cs" />
