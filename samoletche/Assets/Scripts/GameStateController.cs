@@ -40,10 +40,9 @@ public class GameStateController : MonoBehaviour {
 	    {
 	        PlayerStats.SurvivalModeRecord = this.CurrentScore;
 	    }
-	    else if (this.CurrentScore > PlayerStats.NormalModeRecord)
+	    else if (this.CurrentScore > PlayerStats.ClassicModeRecord)
 	    {
-	        PlayerStats.NormalModeRecord = this.CurrentScore;
-	        Debug.Log(PlayerStats.NormalModeRecord);
+	        PlayerStats.ClassicModeRecord = this.CurrentScore;
 	    }
     }
 

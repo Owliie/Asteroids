@@ -27,14 +27,10 @@ public class PlayerController : MonoBehaviour
         {
             SaveAndLoadSys.SavePlayerRec();
             MenuController.CurrentScene = SceneManager.GetActiveScene().name;
+            AsteroidSpawner.Instance.UnregisterPlayer(this.gameObject);
+            GameStateController.Instance.OnPlayerDied();
             Destroy(this.gameObject);
         }
-    }
-
-    void OnDestroy()
-    {
-        AsteroidSpawner.Instance.UnregisterPlayer(this.gameObject);
-        GameStateController.Instance.OnPlayerDied();
     }
 
     void FixedUpdate()

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats
+public static class PlayerStats
 {
-    public static uint NormalModeRecord = 0;
+    public static uint ClassicModeRecord = 0;
     public static uint SurvivalModeRecord = 0;
-    public static string PlayerName = "";
+//    public static string PlayerName = "";
 }

@@ -8,9 +8,9 @@ public class MenuController : MonoBehaviour
 {
     public static string CurrentScene;
 
-    public void NormalMode()
+    public void ClassicMode()
     {
-        SceneManager.LoadScene("Normal", LoadSceneMode.Single);
+        SceneManager.LoadScene("Classic", LoadSceneMode.Single);
     }
 
     public void SurvivalMode()
@@ -36,13 +36,23 @@ public class MenuController : MonoBehaviour
     void Awake()
     {
         SavedData data = SaveAndLoadSys.Load();
-        PlayerStats.NormalModeRecord = data.NormalModeRecord;
-        PlayerStats.SurvivalModeRecord = data.SurvivalModeRecord;
-        PlayerStats.PlayerName = data.PlayerName;
+        if (data != null)
+        {
+            PlayerStats.ClassicModeRecord = data.ClassicModeRecord;
+            PlayerStats.SurvivalModeRecord = data.SurvivalModeRecord;
+            //        PlayerStats.PlayerName = data.PlayerName;
+        }
     }
 
     void Update()
     {
-        GameObject.Find("PlayerRecordNormal").GetComponent<Text>().text = PlayerStats.NormalModeRecord.ToString();
+        if (GameObject.Find("PlayerRecordClassic"))
+        {
+            GameObject.Find("PlayerRecordClassic").GetComponent<Text>().text = "Classic: " + PlayerStats.ClassicModeRecord.ToString();
+        }
+        if (GameObject.Find("PlayerRecordSurvival"))
+        {
+            GameObject.Find("PlayerRecordSurvival").GetComponent<Text>().text = "Survival: " + PlayerStats.SurvivalModeRecord.ToString();
+        }
     }
 }
